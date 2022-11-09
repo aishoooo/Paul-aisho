@@ -8,9 +8,9 @@ class morpion:
             [0, 0, 0,]
         ]
         self.board_front = [
-            ['', '', '',],
-            ['', '', '',],
-            ['', '', '']
+            [' ', ' ', ' ',],
+            [' ', ' ', ' ',],
+            [' ', ' ', ' ']
         ]
         self.player_1 = player_1
         self.player_2 = player_2
@@ -59,6 +59,9 @@ class morpion:
             return (True)
         elif (self.board[0][1]== player.symbol and self.board[0][0] == player.symbol  and self.board[0][2] == player.symbol ):
             print (player.nom + " a gagné")
+            return (True)
+        elif ' ' not in (self.board_front[0]+self.board_front[1]+self.board_front[2]):
+            print('Egalite')
             return (True)
         return (False)
     
