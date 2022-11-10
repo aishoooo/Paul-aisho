@@ -16,7 +16,6 @@ class morpion:
         self.player_2 = player_2
 
     def play(self):
-      
         end = False
         while not end:
             for player in [self.player_1,self.player_2]:
@@ -34,7 +33,6 @@ class morpion:
             
            
             
-
     def __win(self, player):
         if (self.board[0][0] == player.symbol and self.board[1][0] == player.symbol  and self.board[2][0] == player.symbol ) :
             print (player.nom + " a gagné")
